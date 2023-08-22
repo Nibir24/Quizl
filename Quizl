@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int score = 0;
+    char answer1, answer2;
+
+    printf("Welcome to the Mini Quiz!\n\n");
+
+    // Question 1
+    printf("Q1. What is the capital of France?\n");
+    printf("a. Madrid\n");
+    printf("b. Paris\n");
+    printf("c. London\n");
+    printf("Enter your answer: ");
+    scanf(" %c", &answer1);  // Notice the space before %c to consume newline character
+
+    if (answer1 == 'b' || answer1 == 'B') {
+        score++;
+        printf("Correct!\n");
+    } else {
+        printf("Wrong answer. The correct answer is b. Paris.\n\n");
+    }
+
+    // Question 2
+    printf("Q2. How many planets are there in the solar system?\n");
+    printf("a. 9\n");
+    printf("b. 8\n");
+    printf("Enter your answer: ");
+    scanf(" %c", &answer2);
+
+    if (answer2 == 'b' || answer2 == 'B') {
+        score++;
+        printf("Correct!\n");
+    } else {
+        printf("Wrong answer. The correct answer is b. 8.\n\n");
+    }
+
+    printf("Your score is: %d out of 2\n", score);
+
+    return 0;
+}
